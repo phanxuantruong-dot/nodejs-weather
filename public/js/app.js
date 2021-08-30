@@ -12,7 +12,7 @@ form.addEventListener(`submit`, e => {
 });
 
 async function fetchData(location) {
-  const url = `/weather?location=${location}`;
+  const url = `https://truong-weather-app.herokuapp.com/weather?location=${location}`;
   respone.innerHTML = `Loading...`;
   const data = await fetch(url);
   const dataJSON = await data.json();
