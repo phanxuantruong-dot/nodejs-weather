@@ -12,7 +12,7 @@ form.addEventListener(`submit`, e => {
 });
 
 async function fetchData(location) {
-  const url = `http://localhost:3000/weather?location=${location}`;
+  const url = `/weather?location=${location}`;
   respone.innerHTML = `Loading...`;
   const data = await fetch(url);
   const dataJSON = await data.json();

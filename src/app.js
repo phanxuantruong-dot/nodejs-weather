@@ -7,6 +7,7 @@ const hbs = require('hbs');
 // express initial
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 3000;
 
 // path initial
 const publicFolderPath = path.join(__dirname, '../public');
@@ -105,6 +106,6 @@ app.get('*', (req, res) => {
 // app.com/help (the /help is in the `` of app.get(``,))
 
 // create a server on port 3000 and console.log
-app.listen(3000, () => {
-  console.log(`Sever is up on port 3000.`);
+app.listen(port, () => {
+  console.log(`Sever is up on port ${port}.`);
 });
